@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14f769def887c4729cb8531dd8068b12",
+    "content-hash": "a972ebc1b8d9792d3416fa71c90319c9",
     "packages": [
         {
             "name": "bezhansalleh/filament-plugin-essentials",
