@@ -4,3 +4,6 @@
 @source '../../../../resources/views/filament/**/*';
 
 @source '../../../../vendor/jibaymcs/tabbed/resources/**/*.blade.php';
+@source '../../../../vendor/wezlo/filament-grid-list/resources/views/**/*';
+
+@custom-variant dark (&:where(.dark, .dark *));
