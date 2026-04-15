@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4754982c82622404c252c8d20da3a8b",
+    "content-hash": "353b011121f13307a3655b34f89238bb",
     "packages": [
         {
             "name": "bezhansalleh/filament-plugin-essentials",
@@ -2205,6 +2205,81 @@
                 }
             ],
             "time": "2025-08-22T14:27:06+00:00"
+        },
+        {
+            "name": "jibaymcs/tabbed",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JibayMcs/Tabbed.git",
+                "reference": "60632739b4d60f9532f725eb57b580112238c3f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JibayMcs/Tabbed/zipball/60632739b4d60f9532f725eb57b580112238c3f4",
+                "reference": "60632739b4d60f9532f725eb57b580112238c3f4",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.15.0"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^8.0",
+                "orchestra/testbench": "^9.0|^10.0",
+                "pestphp/pest": "^3.7|^4.0",
+                "pestphp/pest-plugin-arch": "^3.0|^4.0",
+                "pestphp/pest-plugin-laravel": "^3.0|^4.0",
+                "pestphp/pest-plugin-livewire": "^3.0|^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": [],
+                    "providers": [
+                        "JibayMcs\\Tabbed\\TabbedServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JibayMcs\\Tabbed\\": "src/",
+                    "JibayMcs\\Tabbed\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JibayMcs",
+                    "email": "jb@ss2i-digital.fr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A FilamentPHP plugin to manage records in manageable tabs",
+            "homepage": "https://github.com/jibaymcs/tabbed",
+            "keywords": [
+                "JibayMcs",
+                "filament",
+                "filament-plugin",
+                "filamentphp",
+                "laravel",
+                "tabbed"
+            ],
+            "support": {
+                "issues": "https://github.com/jibaymcs/tabbed/issues",
+                "source": "https://github.com/jibaymcs/tabbed"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/JibayMcs",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-04-11T13:58:01+00:00"
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",
