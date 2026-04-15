@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8bb91404303eef024a6920a3b35848f",
+    "content-hash": "15200c4324326a8f9125be9766a1f13b",
     "packages": [
         {
             "name": "awcodes/filament-badgeable-column",
@@ -2441,6 +2441,80 @@
                 }
             ],
             "time": "2025-08-22T14:27:06+00:00"
+        },
+        {
+            "name": "jacobtims/inline-date-time-picker",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jacobtims/inline-date-time-picker.git",
+                "reference": "11ae347a2b3259410108381ece425d3711755afd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jacobtims/inline-date-time-picker/zipball/11ae347a2b3259410108381ece425d3711755afd",
+                "reference": "11ae347a2b3259410108381ece425d3711755afd",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^4.0|^5.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.15.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^8.0",
+                "orchestra/testbench": "^10.0",
+                "pestphp/pest": "^3.0",
+                "pestphp/pest-plugin-arch": "^3.0",
+                "pestphp/pest-plugin-laravel": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "InlineDateTimePicker": "Jacobtims\\InlineDateTimePicker\\Facades\\InlineDateTimePicker"
+                    },
+                    "providers": [
+                        "Jacobtims\\InlineDateTimePicker\\InlineDateTimePickerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jacobtims\\InlineDateTimePicker\\": "src/",
+                    "Jacobtims\\InlineDateTimePicker\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacobtims",
+                    "email": "jacobtimmer04@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Filament plugin for adding inline Date-time Pickers to your Filament forms.",
+            "homepage": "https://github.com/jacobtims/inline-date-time-picker",
+            "keywords": [
+                "Jacobtims",
+                "inline-date-time-picker",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/jacobtims/inline-date-time-picker/issues",
+                "source": "https://github.com/jacobtims/inline-date-time-picker"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Jacobtims",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-02-03T13:58:24+00:00"
         },
         {
             "name": "jibaymcs/tabbed",
