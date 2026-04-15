@@ -1,9 +1,13 @@
 {
     "agents": [
-        "claude_code"
+        "copilot"
     ],
     "guidelines": true,
     "packages": [
-        "filament/filament"
+        "filament/filament",
+        "spatie/laravel-activitylog",
+        "spatie/laravel-medialibrary",
+        "spatie/laravel-permission",
+        "fruitcake/laravel-debugbar"
     ]
 }
