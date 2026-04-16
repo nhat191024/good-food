@@ -18,6 +18,7 @@
         "jacobtims/inline-date-time-picker": "^2.1",
         "jibaymcs/tabbed": "^1.0",
         "laravel/framework": "^13.0",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^3.0",
         "predis/predis": "^3.4",
         "ralphjsmit/laravel-filament-upload": "^1.3",
