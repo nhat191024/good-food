@@ -22,6 +22,8 @@ return new class extends Migration
             $table->foreignId('parent_id')->nullable()->constrained('locations')->nullOnDelete();
             $table->softDeletes();
             $table->timestamps();
+
+            $table->index('parent_id');
         });
     }
 
