@@ -1,8 +1,11 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+use App\Models\Food;
+
+Artisan::command('test', function () {
+    $food = Food::all();
+
+    $this->info($food);
+})->purpose('For testing purposes');
