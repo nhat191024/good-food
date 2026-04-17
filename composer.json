@@ -25,6 +25,7 @@
         "spatie/laravel-activitylog": "^5.0",
         "spatie/laravel-medialibrary": "^11.21",
         "spatie/laravel-permission": "^7.3",
+        "spatie/laravel-settings": "^3.7",
         "wezlo/filament-grid-list": "^1.0"
     },
     "require-dev": {
