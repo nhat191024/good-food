@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Models\Admin;
 
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -35,8 +36,9 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->viteTheme('resources/css/filament/admin/theme.css')
             ->login()
+
+            ->viteTheme('resources/css/filament/admin/theme.css')
             ->colors([
                 'primary' => Color::Lime,
             ])
