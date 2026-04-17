@@ -4,7 +4,9 @@ namespace App\Models;
 
 use App\Enums\RestaurantStatus;
 
+use Database\Factories\RestaurantFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -56,10 +58,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Restaurant whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-#[Fillable(['owner_id', 'name', 'description', 'opening_time', 'closing_time', 'address', 'rating', 'commission_percentage', 'status'])]
+#[Fillable(['owner_id', 'name', 'description', 'opening_time', 'closing_time', 'address', 'location_id', 'rating', 'commission_percentage', 'status'])]
 class Restaurant extends Model implements HasMedia
 {
-    use InteractsWithMedia, SoftDeletes;
+    /** @use HasFactory<RestaurantFactory> */
+    use HasFactory, InteractsWithMedia, SoftDeletes;
     /**
      * Get the attributes that should be cast.
      *
@@ -68,8 +71,6 @@ class Restaurant extends Model implements HasMedia
     protected function casts(): array
     {
         return [
-            'opening_time' => 'H:i:datetime',
-            'closing_time' => 'H:i:datetime',
             'status' => RestaurantStatus::class,
         ];
     }
