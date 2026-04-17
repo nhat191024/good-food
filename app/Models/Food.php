@@ -2,9 +2,14 @@
 
 namespace App\Models;
 
+use Database\Factories\FoodFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * @property int $id
@@ -42,8 +47,21 @@ use Illuminate\Database\Eloquent\Model;
  */
 #[Fillable(['name', 'description', 'price', 'category_id', 'sale_count', 'like_count', 'is_required_variation', 'is_available'])]
 #[Table('foods')]
-class Food extends Model
+class Food extends Model implements HasMedia
 {
+    /** @use HasFactory<FoodFactory> */
+    use HasFactory, InteractsWithMedia;
+
+    /**
+     * Register media collections for the model.
+     */
+    public function registerMediaCollections(): void
+    {
+        $this
+            ->addMediaCollection('thumbnail')
+            ->singleFile()
+            ->useDisk('public');
+    }
     //Relationships
     public function restaurant()
     {
