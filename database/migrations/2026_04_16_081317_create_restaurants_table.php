@@ -26,6 +26,7 @@ return new class extends Migration
             $table->integer('rating_count')->default(0);
             $table->integer('commission_percentage')->default(0);
             $table->string('status')->default(RestaurantStatus::ACTIVE->value);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

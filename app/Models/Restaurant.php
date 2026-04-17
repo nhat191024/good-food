@@ -6,6 +6,7 @@ use App\Enums\RestaurantStatus;
 
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -58,7 +59,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 #[Fillable(['owner_id', 'name', 'description', 'opening_time', 'closing_time', 'address', 'rating', 'commission_percentage', 'status'])]
 class Restaurant extends Model implements HasMedia
 {
-    use InteractsWithMedia;
+    use InteractsWithMedia, SoftDeletes;
     /**
      * Get the attributes that should be cast.
      *
