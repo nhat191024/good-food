@@ -3,8 +3,9 @@
 namespace App\Models;
 
 use App\Enums\BillStatus;
-
+use Database\Factories\BillFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -54,6 +55,9 @@ use Illuminate\Database\Eloquent\Model;
 #[Fillable(['customer_id', 'restaurant_id', 'shipper_id', 'code', 'voucher_code', 'location_id', 'address', 'total', 'total_final', 'discount', 'note', 'status'])]
 class Bill extends Model
 {
+    /** @use HasFactory<BillFactory> */
+    use HasFactory;
+
     /**
      * Get the attributes that should be cast.
      *
