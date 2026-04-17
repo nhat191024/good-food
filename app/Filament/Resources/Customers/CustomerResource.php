@@ -56,7 +56,7 @@ class CustomerResource extends Resource
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
-            ->with(['partnerProfile', 'roles', 'wallet'])
+            ->with(['roles'])
             ->whereHas('roles', function ($query) {
                 $query->where('name', Role::CUSTOMER->value);
             });
