@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Attributes\Table;
+use Database\Factories\CustomerFactory;
 use Illuminate\Database\Eloquent\Attributes\Guarded;
+use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\Activitylog\Support\LogOptions;
 
@@ -42,6 +44,17 @@ use Spatie\Activitylog\Support\LogOptions;
 #[Guarded(['web'])]
 class Customer extends User
 {
+    /** @use HasFactory<CustomerFactory> */
+    use HasFactory;
+
+    /**
+     * Create a new factory instance for the model.
+     */
+    protected static function newFactory(): CustomerFactory
+    {
+        return CustomerFactory::new();
+    }
+
     public function getActivitylogOptions(): LogOptions
     {
         return LogOptions::defaults()

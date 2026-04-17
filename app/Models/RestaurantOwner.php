@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Attributes\Table;
+use Database\Factories\RestaurantOwnerFactory;
 use Illuminate\Database\Eloquent\Attributes\Guarded;
+use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Activitylog\Support\LogOptions;
 
 /**
@@ -37,6 +39,17 @@ use Spatie\Activitylog\Support\LogOptions;
 #[Guarded(['web'])]
 class RestaurantOwner extends User
 {
+    /** @use HasFactory<RestaurantOwnerFactory> */
+    use HasFactory;
+
+    /**
+     * Create a new factory instance for the model.
+     */
+    protected static function newFactory(): RestaurantOwnerFactory
+    {
+        return RestaurantOwnerFactory::new();
+    }
+
     public function getActivitylogOptions(): LogOptions
     {
         return LogOptions::defaults()

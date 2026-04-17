@@ -13,6 +13,13 @@ use Illuminate\Support\Str;
 class UserFactory extends Factory
 {
     /**
+     * The name of the factory's corresponding model.
+     *
+     * @var class-string<User>
+     */
+    protected $model = User::class;
+
+    /**
      * The current password being used by the factory.
      */
     protected static ?string $password;
@@ -24,11 +31,17 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $name = fake()->name();
+
         return [
-            'name' => fake()->name(),
+            'name' => $name,
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
+            'avatar' => 'https://ui-avatars.com/api/?name=' . urlencode($name) . '&background=random&size=512',
+            'phone' => fake()->unique()->numerify('0#########'),
+            'gender' => fake()->randomElement(['male', 'female']),
+            'birthday' => fake()->dateTimeBetween('-60 years', '-18 years')->format('Y-m-d'),
             'remember_token' => Str::random(10),
         ];
     }

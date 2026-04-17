@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Attributes\Table;
+use Database\Factories\ShipperFactory;
 use Illuminate\Database\Eloquent\Attributes\Guarded;
+use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Activitylog\Support\LogOptions;
 
 /**
@@ -37,6 +39,17 @@ use Spatie\Activitylog\Support\LogOptions;
 #[Guarded(['web'])]
 class Shipper extends User
 {
+    /** @use HasFactory<ShipperFactory> */
+    use HasFactory;
+
+    /**
+     * Create a new factory instance for the model.
+     */
+    protected static function newFactory(): ShipperFactory
+    {
+        return ShipperFactory::new();
+    }
+
     public function getActivitylogOptions(): LogOptions
     {
         return LogOptions::defaults()

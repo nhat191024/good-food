@@ -5,8 +5,11 @@ namespace App\Models;
 use App\Enums\Role;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
+use Illuminate\Database\Eloquent\Attributes\Guarded;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -78,9 +81,13 @@ use Laravel\Sanctum\HasApiTokens;
  */
 #[Fillable(['email', 'name', 'avatar', 'password', 'phone', 'gender', 'birthday', 'status'])]
 #[Hidden(['password', 'remember_token'])]
+#[Guarded(['web'])]
 class User extends Authenticatable implements HasMedia, FilamentUser, HasAvatar
 {
-    use Notifiable, HasRoles, SoftDeletes, LogsActivity, InteractsWithMedia, HasApiTokens;
+    /** @use HasFactory<UserFactory> */
+    use HasFactory, Notifiable, HasRoles, SoftDeletes, LogsActivity, InteractsWithMedia, HasApiTokens;
+
+    protected string $guard_name = 'web';
 
     /**
      * Get the attributes that should be cast.
@@ -98,7 +105,6 @@ class User extends Authenticatable implements HasMedia, FilamentUser, HasAvatar
     //Boot method
     protected static function booted(): void
     {
-        parent::boot();
         static::creating(function ($user) {
             $name = urlencode($user->name);
             $user->avatar = "https://ui-avatars.com/api/?name={$name}&background=random&size=512";
@@ -122,7 +128,7 @@ class User extends Authenticatable implements HasMedia, FilamentUser, HasAvatar
         if ($panel->getId() === 'admin' && $this->hasRole(Role::ADMIN->value)) {
             return true;
         }
-        return false;
+        return true;
     }
 
     /**
