@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             LocationSeeder::class,
             RestaurantSeeder::class,
+            SettingsSeeder::class,
         ]);
     }
 }
