@@ -6,7 +6,7 @@ use Filament\Support\Contracts\HasLabel;
 
 enum FilamentNavigationGroup implements HasLabel
 {
-    case CATEGORIES;
+    case GENERAL;
     case USER_MANAGEMENT;
     case BILLING;
     case SYSTEM;
@@ -15,10 +15,10 @@ enum FilamentNavigationGroup implements HasLabel
     public function getLabel(): string
     {
         return match ($this) {
+            self::GENERAL => "Tổng quan",
             self::USER_MANAGEMENT => "Người dùng",
             self::BILLING => "Hóa đơn",
             self::SETTINGS => "Cài đặt",
-            self::CATEGORIES => "Danh mục",
             self::SYSTEM => "Hệ thống",
         };
     }
