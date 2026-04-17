@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->date('birthday')->nullable();
 
+            $table->boolean('is_verified')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamp('phone_verified_at')->nullable();
 

@@ -25,6 +25,9 @@ use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 
 use Laravel\Sanctum\HasApiTokens;
+use Predis\Response\Status;
+
+use function Symfony\Component\String\s;
 
 /**
  * @property int $id
@@ -79,7 +82,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User withoutTrashed()
  * @mixin \Eloquent
  */
-#[Fillable(['email', 'name', 'avatar', 'password', 'phone', 'gender', 'birthday', 'status'])]
+#[Fillable(['email', 'name', 'avatar', 'password', 'phone', 'gender', 'birthday', 'is_verified', 'status'])]
 #[Hidden(['password', 'remember_token'])]
 #[Guarded(['web'])]
 class User extends Authenticatable implements HasMedia, FilamentUser, HasAvatar
