@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Attributes\Guarded;
 use Spatie\Activitylog\Support\LogOptions;
 
 /**
@@ -31,6 +33,8 @@ use Spatie\Activitylog\Support\LogOptions;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|RestaurantOwner withoutTrashed()
  * @mixin \Eloquent
  */
+#[Table('users')]
+#[Guarded(['web'])]
 class RestaurantOwner extends User
 {
     public function getActivitylogOptions(): LogOptions
@@ -47,6 +51,6 @@ class RestaurantOwner extends User
     //Relationships
     public function restaurants()
     {
-        return $this->hasMany(Restaurant::class);
+        return $this->hasMany(Restaurant::class, 'owner_id');
     }
 }

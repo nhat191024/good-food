@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Attributes\Guarded;
 use Spatie\Activitylog\Support\LogOptions;
 
 /**
@@ -31,6 +33,8 @@ use Spatie\Activitylog\Support\LogOptions;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Shipper withoutTrashed()
  * @mixin \Eloquent
  */
+#[Table('users')]
+#[Guarded(['web'])]
 class Shipper extends User
 {
     public function getActivitylogOptions(): LogOptions

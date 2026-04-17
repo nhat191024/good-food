@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Attributes\Guarded;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\Activitylog\Support\LogOptions;
 
@@ -36,6 +38,8 @@ use Spatie\Activitylog\Support\LogOptions;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Customer withoutTrashed()
  * @mixin \Eloquent
  */
+#[Table('users')]
+#[Guarded(['web'])]
 class Customer extends User
 {
     public function getActivitylogOptions(): LogOptions
