@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Cơm",
+        "description": "Các món cơm truyền thống Việt Nam như cơm tấm, cơm chiên, cơm gà..."
+    },
+    {
+        "name": "Cháo",
+        "description": "Các loại cháo dinh dưỡng như cháo lòng, cháo gà, cháo hải sản..."
+    },
+    {
+        "name": "Bánh mì",
+        "description": "Bánh mì Việt Nam với đa dạng nhân như thịt, pate, trứng, chả..."
+    },
+    {
+        "name": "Phở",
+        "description": "Phở bò, phở gà - món ăn đặc trưng văn hoá ẩm thực Việt Nam."
+    },
+    {
+        "name": "Bún",
+        "description": "Các món bún như bún bò, bún riêu, bún đậu mắm tôm..."
+    },
+    {
+        "name": "Hủ tiếu",
+        "description": "Hủ tiếu Nam Vang, hủ tiếu mực, hủ tiếu bò kho..."
+    },
+    {
+        "name": "Mì",
+        "description": "Mì xào, mì nước, mì Quảng, mì trộn các loại."
+    },
+    {
+        "name": "Lẩu",
+        "description": "Lẩu thái, lẩu nấm, lẩu bò, lẩu hải sản và các loại lẩu hấp dẫn."
+    },
+    {
+        "name": "Nướng",
+        "description": "Các món nướng như thịt nướng, hải sản nướng, rau nướng..."
+    },
+    {
+        "name": "Chiên - Rán",
+        "description": "Các món chiên giòn như gà rán, chả giò, khoai tây chiên..."
+    },
+    {
+        "name": "Chè",
+        "description": "Chè ba màu, chè khúc bạch, chè đậu xanh, chè thái và nhiều loại khác."
+    },
+    {
+        "name": "Bánh ngọt",
+        "description": "Bánh kem, bánh flan, bánh cupcake và các loại bánh ngọt tráng miệng."
+    },
+    {
+        "name": "Đồ uống",
+        "description": "Trà sữa, cà phê, nước ép, sinh tố và các đồ uống giải khát."
+    },
+    {
+        "name": "Hải sản",
+        "description": "Tôm, cua, cá, mực và các món hải sản tươi sống đa dạng."
+    },
+    {
+        "name": "Dimsum",
+        "description": "Há cảo, xíu mại, bánh bao và các món dimsum hấp dẫn."
+    },
+    {
+        "name": "Pizza",
+        "description": "Pizza các vị phong phú như hải sản, bò, gà, rau củ..."
+    },
+    {
+        "name": "Burger",
+        "description": "Burger bò, burger gà, burger chay và các loại burger sáng tạo."
+    },
+    {
+        "name": "Salad - Healthy",
+        "description": "Các món salad tươi mát, ăn kiêng, thuần chay và lành mạnh."
+    },
+    {
+        "name": "Sushi - Nhật Bản",
+        "description": "Sushi, sashimi, ramen, tempura và các món Nhật Bản chính thống."
+    },
+    {
+        "name": "Đồ ăn vặt",
+        "description": "Bánh tráng trộn, ô mai, bắp rang bơ và các loại snack phổ biến."
+    }
+]
