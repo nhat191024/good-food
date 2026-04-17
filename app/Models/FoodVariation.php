@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use Database\Factories\FoodVariationFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -33,6 +35,8 @@ use Illuminate\Database\Eloquent\Model;
 #[Fillable(['food_id', 'name', 'description', 'price',  'group', 'is_available'])]
 class FoodVariation extends Model
 {
+    /** @use HasFactory<FoodVariationFactory> */
+    use HasFactory;
     //Relationships
     public function food()
     {
